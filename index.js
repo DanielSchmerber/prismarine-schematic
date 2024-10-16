@@ -131,11 +131,11 @@ class Schematic {
 
   static async read (buffer, version = null) {
     const schem = nbt.simplify(await parseNbt(buffer))
-    const formats = [sponge,spongeV3,mcedit]
-    for(const format of formats){
-      try{
-        return format.read(schem,version)
-      }catch (e){
+    const formats = [sponge, spongeV3, mcedit]
+    for (const format of formats) {
+      try {
+        return format.read(schem, version)
+      } catch (e) {
 
       }
     }
