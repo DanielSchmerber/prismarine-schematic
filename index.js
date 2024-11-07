@@ -139,6 +139,7 @@ class Schematic {
 
       }
     }
+    throw new Error("The schematic did not match any supported format")
   }
 
   async write () {
